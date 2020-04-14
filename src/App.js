@@ -24,13 +24,13 @@ function App() {
 
           <Switch>
             <Route path="/about">
-              <About />
+              {/*<About />*/}
             </Route>
             <Route path="/users">
-              <Users />
+              {/*<Users />*/}
             </Route>
             <Route path="/">
-              <Home />
+              {/*<Home />*/}
             </Route>
           </Switch>
         </div>
