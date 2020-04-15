@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
@@ -15,21 +15,23 @@ function AppContainer() {
 
   useEffect(() => {
     dispatch(getAllBusinesses());
-  }, []);
+  }, [dispatch]);
 
   if (!loaded) {
     return <h1>Loading</h1>
   }
 
-  if (error) {
+  if (Object.keys(error).length !== 0) {
     return <h1>{error.message}</h1>
   }
+
+  console.log(businesses);
 
   return (
     <div className="App">
       <Router>
         <div>
-          {/*<nav>
+          <nav>
             <ul>
               <li>
                 <Link to="/">Home</Link>
@@ -41,7 +43,7 @@ function AppContainer() {
                 <Link to="/users">Users</Link>
               </li>
             </ul>
-          </nav>*/}
+          </nav>
 
           <Switch>
             <Route path="/about">
