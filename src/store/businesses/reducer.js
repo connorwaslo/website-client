@@ -1,4 +1,4 @@
-import { GET_BUSINESSES, SET_ERROR } from '../actions/businessActions'
+import { GET_BUSINESSES, SET_ERROR } from './actionTypes'
 
 let initialState = {
   loaded: false,

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './App.css'
 
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import { getAllBusinesses } from './actions/businessActions'
+import { getAllBusinesses } from './store/businesses/actions'
 import { useDispatch, useSelector } from 'react-redux'
 
 function AppContainer() {

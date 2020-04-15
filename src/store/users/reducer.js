@@ -1,4 +1,4 @@
-import { SET_AUTH_STATUS } from '../actions/authActions'
+import { SET_AUTH_STATUS } from './actionTypes'
 
 let initialState = {
   user: {},
