@@ -11,7 +11,7 @@ export const setError = (message) => {
 
 export const getAllBusinesses = () => {
   return (dispatch) => {
-    fetch('http://localhost:8000/api/businesses') // Todo: /api/not-sure-what
+    fetch('https://warm-cliffs-11938.herokuapp.com/api/businesses')
       .then(
         res => res.json(),
         err => {
