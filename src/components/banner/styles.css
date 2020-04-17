@@ -1,0 +1,24 @@
+.ui.card.bannerCard {
+    padding: 3% 20%;
+    background: linear-gradient(270deg, #F14600 0%, #FF8601 100%);
+    box-shadow: 0px 2px 8px rgba(108, 108, 108, 0.12);
+    border-radius: 8px;
+}
+
+.ui.card.content.header {
+    color: white;
+}
+
+#dismissButton {
+    position: absolute;
+    top: 0.5em;
+    right: 1em;
+    background: transparent;
+    border: none;
+}
+
+.dismissText {
+    text-align: right;
+    color: #FFFFFF;
+    opacity: 0.4;
+}
