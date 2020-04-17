@@ -1,0 +1,25 @@
+.ui.card.businessCard {
+    background: #232029;
+    border-radius: 4px;
+}
+
+.header.cardText {
+    text-align: left;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.meta.cardText {
+    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.investButtonContainer {
+    text-align: left;
+    margin: 0.5em 0;
+}
