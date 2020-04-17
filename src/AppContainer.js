@@ -31,7 +31,6 @@ function AppContainer() {
 
   console.log(businesses);
 
-  // div className="App"
   return (
     <div className='App'>
       <Router>
