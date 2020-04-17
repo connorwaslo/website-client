@@ -9,7 +9,7 @@ function Home() {
     <Container>
       <Header/>
 
-      <div style={{ paddingTop: '80px' }}>
+      <div style={{ paddingTop: '100px' }}>
         <SearchBar/>
         <BusinessCard name='Maya Day Club' location='Phoenix, AZ'/>
       </div>
