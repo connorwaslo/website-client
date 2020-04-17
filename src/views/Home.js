@@ -5,16 +5,16 @@ import SearchBar from '../components/SearchBar';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
 import { useSelector } from 'react-redux';
+import BusinessContainer from '../components/BusinessContainer';
 
 function Home() {
-  const [search, setSearch] = useState('');
-  const [visibleBusinesses, setVisibleBusinesses] = useState([]); // Todo: Load businesses from redux
-  const [showBanner, setShowBanner] = useState(true);
-
   const { allBusinesses } = useSelector(state => ({
     allBusinesses: state.businesses.all
   }));
 
+  const [search, setSearch] = useState('');
+  const [visibleBusinesses, setVisibleBusinesses] = useState(allBusinesses); // Todo: Load businesses from redux
+  const [showBanner, setShowBanner] = useState(true);
 
   function handleChangeSearch(e) {
     e.preventDefault();
@@ -22,7 +22,8 @@ function Home() {
     let newSearch = e.target.value;
 
     // Filter visible businesses by new search term
-    let showBusinesses = allBusinesses.filter(biz => biz.business_name.includes(newSearch));
+    // Convert both terms to lowercase for ease of use
+    let showBusinesses = allBusinesses.filter(biz => biz.business_name.toLowerCase().includes(newSearch.toLowerCase()));
 
     console.log(showBusinesses);
 
@@ -48,7 +49,7 @@ function Home() {
           <SearchBar search={search} handleChangeSearch={handleChangeSearch}/>
         </div>
 
-        <BusinessCard name='Maya Day Club' location='Phoenix, AZ'/>
+        <BusinessContainer businesses={visibleBusinesses}/>
       </div>
     </Container>
   );

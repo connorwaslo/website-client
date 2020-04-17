@@ -9,7 +9,7 @@ function BusinessCard({ name, location, img, link }) {
 
   return (
     <Card className='businessCard'>
-      <Image src={require('../../temp_assets/restaurant.jpg')} wrapped ui={false}/>
+      <Image src={img} wrapped ui={false}/>
       <Card.Content>
         <Card.Header className='cardText' style={{ color: 'white' }}>{name}</Card.Header>
         <Card.Meta className='cardText' style={{ color: '#95949E' }}>{location}</Card.Meta>
