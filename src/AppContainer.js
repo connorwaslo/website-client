@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Container } from "semantic-ui-react";
 
 import Home from './views/Home'
+import Loading from './views/Loading';
 
 function AppContainer() {
   const { loaded, businesses, error } = useSelector(state => ({
@@ -22,7 +23,7 @@ function AppContainer() {
   }, [dispatch]);
 
   if (!loaded) {
-    return <h1>Loading</h1>
+    return <Loading/>
   }
 
   if (Object.keys(error).length !== 0) {
