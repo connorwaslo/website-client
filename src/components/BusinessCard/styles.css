@@ -1,6 +1,7 @@
 .ui.card.businessCard {
     background: #232029;
     border-radius: 4px;
+    box-shadow: none;
 }
 
 .header.cardText {

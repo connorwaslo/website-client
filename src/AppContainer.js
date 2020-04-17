@@ -33,7 +33,7 @@ function AppContainer() {
 
   // div className="App"
   return (
-    <Container className='App'>
+    <div className='App'>
       <Router>
         <Switch>
           <Route path="/">
@@ -41,7 +41,7 @@ function AppContainer() {
           </Route>
         </Switch>
       </Router>
-    </Container>
+    </div>
   )
 }
 
