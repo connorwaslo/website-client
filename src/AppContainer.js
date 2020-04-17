@@ -1,16 +1,20 @@
 import React, { useEffect } from 'react'
 import './App.css'
 
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import { getAllBusinesses } from './store/businesses/actions'
 import { useDispatch, useSelector } from 'react-redux'
+
+import { Container } from "semantic-ui-react";
+
+import Home from './views/Home'
 
 function AppContainer() {
   const { loaded, businesses, error } = useSelector(state => ({
     loaded: state.businesses.loaded,
     businesses: state.businesses.all,
     error: state.businesses.error
-  }))
+  }));
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -27,38 +31,17 @@ function AppContainer() {
 
   console.log(businesses);
 
+  // div className="App"
   return (
-    <div className="App">
+    <Container className='App'>
       <Router>
-        <div>
-          <nav>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About</Link>
-              </li>
-              <li>
-                <Link to="/users">Users</Link>
-              </li>
-            </ul>
-          </nav>
-
-          <Switch>
-            <Route path="/about">
-              {/*<About />*/}
-            </Route>
-            <Route path="/users">
-              {/*<Users />*/}
-            </Route>
-            <Route path="/">
-              {/*<Home />*/}
-            </Route>
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/">
+            <Home/>
+          </Route>
+        </Switch>
       </Router>
-    </div>
+    </Container>
   )
 }
 
