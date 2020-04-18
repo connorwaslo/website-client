@@ -30,8 +30,8 @@ function BusinessContainer({ businesses }) {
   function renderCard(business) {
     const name = business.business_name;
     const location = 'Phoenix, AZ';
-    const img = 'https://via.placeholder.com/150'; // Todo: [URGENT] Replace
-    const link = business.website;
+    const img = business.pic;
+    const link = business.giftcardUrl;
 
     return (
       <Grid.Column>

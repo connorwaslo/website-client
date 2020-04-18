@@ -5,8 +5,6 @@ import ProgressBar from './ProgressBar'
 import './styles.css'
 
 function BusinessCard({ name, location, img, link }) {
-  // Todo: replace Image src with img prop
-
   return (
     <Card className='businessCard'>
       <Image src={img} wrapped ui={false}/>
