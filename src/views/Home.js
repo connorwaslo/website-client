@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { Container } from 'semantic-ui-react'
-import BusinessCard from "../components/BusinessCard";
+import React, { useEffect, useState } from 'react';
+import { Container, Image } from 'semantic-ui-react'
 import SearchBar from '../components/SearchBar';
 import Header from '../components/Header';
 import Banner from '../components/Banner';
@@ -13,7 +12,7 @@ function Home() {
   }));
 
   const [search, setSearch] = useState('');
-  const [visibleBusinesses, setVisibleBusinesses] = useState(allBusinesses); // Todo: Load businesses from redux
+  const [visibleBusinesses, setVisibleBusinesses] = useState(allBusinesses);
   const [showBanner, setShowBanner] = useState(true);
 
   function handleChangeSearch(e) {
@@ -24,8 +23,6 @@ function Home() {
     // Filter visible businesses by new search term
     // Convert both terms to lowercase for ease of use
     let showBusinesses = allBusinesses.filter(biz => biz.business_name.toLowerCase().includes(newSearch.toLowerCase()));
-
-    console.log(showBusinesses);
 
     setSearch(e.target.value);
     setVisibleBusinesses(showBusinesses);

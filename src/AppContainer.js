@@ -19,7 +19,7 @@ function AppContainer() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getAllBusinesses());
+    // dispatch(getAllBusinesses());
   }, [dispatch]);
 
   if (!loaded) {
@@ -29,8 +29,6 @@ function AppContainer() {
   if (Object.keys(error).length !== 0) {
     return <h1>{error.message}</h1>
   }
-
-  console.log(businesses);
 
   return (
     <div className='App'>

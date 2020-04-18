@@ -16,7 +16,7 @@ function BusinessContainer({ businesses }) {
 
       // Push the row to the list of rows for rendering
       rows.push(
-        <Grid.Row>
+        <Grid.Row stretched>
           {curRow.map(business => (
             renderCard(business)
           ))}
@@ -30,8 +30,8 @@ function BusinessContainer({ businesses }) {
   function renderCard(business) {
     const name = business.business_name;
     const location = 'Phoenix, AZ';
-    const img = require('../../temp_assets/restaurant.jpg'); // Todo: Replace
-    const link = 'http://www.google.com'; // Todo: Replace
+    const img = 'https://via.placeholder.com/150'; // Todo: [URGENT] Replace
+    const link = business.website;
 
     return (
       <Grid.Column>
