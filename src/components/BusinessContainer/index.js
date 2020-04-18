@@ -46,7 +46,7 @@ function BusinessContainer({ businesses }) {
   }
 
   return (
-    <Grid columns={NUM_COLUMNS}>
+    <Grid doubling columns={NUM_COLUMNS}>
       {renderRows()}
     </Grid>
   )
